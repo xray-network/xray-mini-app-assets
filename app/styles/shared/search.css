@@ -1,0 +1,41 @@
+@import "@/styles/tailwind.css";
+
+.shared-search-suffix {
+  @apply flex items-center justify-center size-6 bg-gray-100 text-gray-400 rounded-md;
+  @apply dark:bg-gray-700 dark:text-gray-500;
+
+  &::before {
+    content: "/";
+  }
+}
+
+/* // .xray {
+//   &-search {
+//     &-suffix {
+//       display: flex;
+//       align-items: center;
+//       height: rem(20);
+//       width: rem(22);
+//       background: $gray-1;
+//       color: $gray-4;
+//       border-radius: rem(3);
+//       &::before {
+//         content: "/";
+//         display: block;
+//         margin-left: rem(7);
+//       }
+//     }
+//   }
+// }
+
+// // dark theme
+// [data-theme="dark"] {
+//   .xray {
+//     &-search {
+//       &-suffix {
+//         background: $dark-gray-5;
+//         color: $dark-gray-3;
+//       }
+//     }
+//   }
+// } */

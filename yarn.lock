@@ -1887,9 +1887,9 @@ as-table@^1.0.36:
     printable-characters "^1.0.42"
 
 b4a@^1.0.1:
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/b4a/-/b4a-1.6.7.tgz#a99587d4ebbfbd5a6e3b21bdb5d5fa385767abe4"
-  integrity sha512-OnAYlL5b7LEkALw87fUVafQw5rVR9RjwGd4KUwNQ6DrrNmaVaUCgLipfVlzrPQ4tWOR9P0IXGNOx50jYCCdSJg==
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/b4a/-/b4a-1.7.3.tgz#24cf7ccda28f5465b66aec2bac69e32809bf112f"
+  integrity sha512-5Q2mfq2WfGuFp3uS//0s6baOJLMoVduPYVeNmDYxu5OUA1/cBfvr2RIS7vi62LdNj/urk1hfmj867I3qt6uZ7Q==
 
 babel-dead-code-elimination@^1.0.6:
   version "1.0.10"
@@ -2034,30 +2034,30 @@ caniuse-lite@^1.0.30001718:
   integrity sha512-1R/elMjtehrFejxwmexeXAtae5UO9iSyFn6G/I806CYC/BLyyBk1EPhrKBkWhy6wM6Xnm47dSJQec+tLJ39WHw==
 
 cardano-koios-client@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/cardano-koios-client/-/cardano-koios-client-1.0.10.tgz#abb6842d67c002712678c072c2e4c97bf3aa70c9"
-  integrity sha512-mXHsyUtQc++ERoaGUuSYwtb0WF01j6eaQkv3QF1ZSYCVRHr9duGIx6gr25MxJdPEOTMovsHKaPlUAHFPoSaKIA==
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/cardano-koios-client/-/cardano-koios-client-1.0.12.tgz#a8fc3c6322a650aeddca2c7bbb6403add060c695"
+  integrity sha512-uBQx6A3KZkJm4bMleL73JS3jLg9KsfDSXk/x4MTF+UdT1IAFXwwOZc0uoEsCUmXh9opbxwlFNQezdfaEoavFSg==
   dependencies:
     openapi-fetch "^0.13.3"
 
 cardano-kupo-client@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/cardano-kupo-client/-/cardano-kupo-client-1.0.1.tgz#caaeea2409cdddad7c44263af5c47da495f0d0ae"
-  integrity sha512-bNInyRDi87MX6SQaYEa0RoNjqPyDiDQXj30wo+Obk5nA+A1GmibESO4tRNICk/RRNhmzI5L+ZpiFd0f8a0LeQA==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/cardano-kupo-client/-/cardano-kupo-client-1.0.5.tgz#88f4ea4215a1054103a2cfe2d69fd4d57cacdae5"
+  integrity sha512-3BYRlp1M4goltwiYAXPEuVjMNW94p9rKAg7aiPq/B/G8J6gWOZS+vw6lwILDPzaCrTwaVgrYLSpc49CHPDu0yQ==
   dependencies:
     openapi-fetch "^0.13.5"
 
 cardano-nftcdn-client@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/cardano-nftcdn-client/-/cardano-nftcdn-client-1.0.6.tgz#6c8b25c48a211bb2d6f4e396ebc973d7596f3ae5"
-  integrity sha512-yTZy3oubS68TlHNqI9F2huwT/w3wC9cGKdMzeNKYAL4GkJzF+Dfz1IvuDHzOD7dM94aFQq0Nkaulcm/SYslaNg==
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/cardano-nftcdn-client/-/cardano-nftcdn-client-1.0.8.tgz#5029d1fe7ea07b97635032887838184e4149dec1"
+  integrity sha512-0R8MqM0i3ewb7xBv+07e0qs8aOUkL+/rhhBF6cgtkhTTAOoWnRUDOdGO+buwAspXffU8dJSkE4FFikyzZIDbjA==
   dependencies:
     openapi-fetch "^0.13.3"
 
 cardano-ogmios-client@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/cardano-ogmios-client/-/cardano-ogmios-client-1.0.0.tgz#905598fa96d80c39068350bb3f9f25d41871014d"
-  integrity sha512-sS4a3l16R0RKeGfuny+xh1U+FGHgjVjax+U2MWzgW+TXClRXw1WLt+Bp71gWSdlxKhW2mmPxUIQlR53a0O+p1g==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cardano-ogmios-client/-/cardano-ogmios-client-1.0.1.tgz#68d7dee4e3c38701a19c63e1289a7fed2ccc6a7f"
+  integrity sha512-0LUFIf+16MEerg7FiQa6JpXnpCnI2BH4lfcMqFC409biaeIIW/ktRVDOtPQKRK4c2vem7SZaYZiWK/IKbpDTFA==
   dependencies:
     openapi-fetch "^0.13.5"
 
@@ -2291,7 +2291,12 @@ destroy@1.2.0:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
   integrity sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==
 
-detect-libc@^2.0.1, detect-libc@^2.0.3, detect-libc@^2.0.4:
+detect-libc@^2.0.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-2.1.2.tgz#689c5dcdc1900ef5583a4cb9f6d7b473742074ad"
+  integrity sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==
+
+detect-libc@^2.0.3, detect-libc@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-2.0.4.tgz#f04715b8ba815e53b4d8109655b6508a6865a7e8"
   integrity sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==
@@ -4442,6 +4447,18 @@ ws@8.18.0:
   version "8.18.0"
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.18.0.tgz#0d7505a6eafe2b0e712d232b42279f53bc289bbc"
   integrity sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==
+
+xray-mini-app-sdk-react@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/xray-mini-app-sdk-react/-/xray-mini-app-sdk-react-0.1.4.tgz#312a462d2963d628f0eb4ea931505ead67590053"
+  integrity sha512-yerLaluI9rNXiBifhnpad6WigAP7nQ4ME/R+ZO+EuOHy8NRNu5Hpm/LfLFhDbSCDY1z/SZQlwdsktXUUp68kyg==
+  dependencies:
+    xray-mini-app-sdk "0.1.4"
+
+xray-mini-app-sdk@0.1.4, xray-mini-app-sdk@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/xray-mini-app-sdk/-/xray-mini-app-sdk-0.1.4.tgz#e416fb142ba37226a8dad0157b2657e09ae1c8fd"
+  integrity sha512-IKzvNodN/eQEO5GY7QfReTk+Mub1XeOd5PVsjx2l1v6l8JFgt1JidLrLZ4wEndAiAsJAozShsA6CG8YO01aJWg==
 
 yallist@^3.0.2:
   version "3.1.1"
