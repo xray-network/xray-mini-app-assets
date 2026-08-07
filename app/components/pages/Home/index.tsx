@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react"
-import { useAppStore } from "@/store/app"
+import { useAccountState } from "@xray-network/xray-js/mini-app-bridge/react"
 import { Input, type InputRef } from "antd"
 import * as Utils from "@/utils"
 import AssetsTable from "./assetsTable"
@@ -10,7 +10,7 @@ import style from "./style.module.css"
 
 export default function HomePage() {
   const searchInput = useRef<InputRef>(null)
-  const accountState = useAppStore((state) => state.accountState)
+  const { accountState } = useAccountState()
 
   const assetsRaw = accountState?.state?.balance.assets || []
   const [search, setSearch] = useState("")

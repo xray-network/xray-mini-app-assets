@@ -13,14 +13,14 @@ const AssetsTable = ({
   bordered,
   size = "middle",
 }: {
-  data: Types.CW3Types.Balance["assets"]
+  data: Types.CardanoTypes.Balance["assets"]
   loading?: boolean
   bordered?: boolean
   size?: "small" | "middle" | "large"
 }) => {
   const [pageSize, setPageSize] = useState(25)
 
-  const columns: ColumnsType<Types.CW3Types.Balance["assets"][number]> = [
+  const columns: ColumnsType<Types.CardanoTypes.Balance["assets"][number]> = [
     {
       title: "",
       key: "image",
