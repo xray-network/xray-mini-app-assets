@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react"
-import { useAccountState } from "@xray-network/xray-js/mini-app-bridge/react"
+import { useAccountState } from "@xray-network/xray-js/mini-app-bridge/cardano/react"
 import { Input, type InputRef } from "antd"
 import * as Utils from "@/utils"
 import AssetsTable from "./assetsTable"
