@@ -24,7 +24,7 @@ const AssetsTable = ({
     {
       title: "",
       key: "image",
-      width: "2.75rem",
+      width: "38.5px",
       className: "pe-0",
       render: (record, records) => (
         <div className={style.icon}>
