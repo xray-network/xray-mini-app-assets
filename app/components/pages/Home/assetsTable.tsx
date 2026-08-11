@@ -98,7 +98,6 @@ const AssetsTable = ({
         bordered={bordered}
         pagination={{
           position: ["bottomRight", "topRight"],
-          size: "default",
           pageSize: pageSize,
           showSizeChanger: true,
           showPrevNextJumpers: false,
