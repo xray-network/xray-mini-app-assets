@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react"
-import { useAccountState } from "@xray-network/xray-js/mini-app-bridge/cardano/react"
+import { cardano } from "@xray-network/xray-js/mini-app-bridge/react"
 import { Input, type InputRef } from "antd"
 import * as Utils from "@/utils"
 import AssetsTable from "./assetsTable"
@@ -10,7 +10,7 @@ import style from "./style.module.css"
 
 export default function HomePage() {
   const searchInput = useRef<InputRef>(null)
-  const { accountState } = useAccountState()
+  const { accountState } = cardano.bridge.useAccountState()
 
   const assetsRaw = accountState?.state?.balance.assets || []
   const [search, setSearch] = useState("")
