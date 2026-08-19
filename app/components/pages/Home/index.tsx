@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react"
-import { cardano } from "@xray-network/xray-js/mini-app-bridge/react"
+import { cardanoV1, platformV1 } from "@xray-network/xray-js/mini-app-bridge/react"
 import { Input, type InputRef } from "antd"
 import * as Utils from "@/utils"
 import AssetsTable from "./assetsTable"
@@ -10,7 +10,16 @@ import style from "./style.module.css"
 
 export default function HomePage() {
   const searchInput = useRef<InputRef>(null)
-  const { accountState } = cardano.bridge.useAccountState()
+  const accountState = cardanoV1.useAccountState().data
+  const status = platformV1.useStatus()
+  const standalone = typeof window !== "undefined" && window.parent === window
+  const emptyState = status.data?.account
+    ? { title: "Loading account", descr: "Cardano account data is not yet available" }
+    : status.data
+      ? { title: "No account selected", descr: "Select a Cardano account in XRAY App to access your information" }
+    : standalone
+      ? { title: "Standalone mode", descr: "Open this mini app inside XRAY App to access an account" }
+      : { title: "Host unavailable", descr: "XRAY App did not respond to the platform status request" }
 
   const assetsRaw = accountState?.state?.balance.assets || []
   const [search, setSearch] = useState("")
@@ -42,7 +51,7 @@ export default function HomePage() {
       </div>
       <div>
         {!accountState && (
-          <Empty title="Account is not connected" descr="Please connect an account to access your information" />
+          <Empty title={emptyState.title} descr={emptyState.descr} />
         )}
         {accountState && (
           <div>
