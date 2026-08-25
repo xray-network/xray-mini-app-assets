@@ -16,7 +16,7 @@
 }
 
 .body {
-  @apply flex text-inherit;
+  @apply flex text-inherit font-mono;
 }
 
 .copy {
