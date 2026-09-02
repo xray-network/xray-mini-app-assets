@@ -2,7 +2,6 @@
 
 .shared-table {
   white-space: nowrap;
-  overflow-y: auto;
 
   .ant-pagination-total-text {
     margin-right: auto !important;

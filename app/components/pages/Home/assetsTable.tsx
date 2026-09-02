@@ -66,7 +66,7 @@ const AssetsTable = ({
       align: "right",
       sorter: (a, b) => (a.fingerprint || "").localeCompare(b.fingerprint || ""),
       render: (record, records) => (
-        <span className="font-bold text-gray-500">
+        <span className="text-gray-500">
           <Informers.Text value={Utils.truncate(records.policyId, 9, 4)} copy={records.policyId} />
         </span>
       ),
@@ -78,7 +78,7 @@ const AssetsTable = ({
       align: "right",
       sorter: (a, b) => (a.fingerprint || "").localeCompare(b.fingerprint || ""),
       render: (record, records) => (
-        <span className="font-bold text-gray-500">
+        <span className="text-gray-500">
           <Informers.Text value={Utils.truncate(records.fingerprint, 9, 4)} copy={records.fingerprint} />
         </span>
       ),

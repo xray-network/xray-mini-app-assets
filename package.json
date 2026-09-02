@@ -28,6 +28,7 @@
     "dev": "react-router dev --host --port 10002",
     "build": "react-router build",
     "deploy": "npm run build && wrangler pages deploy",
+    "login": "wrangler login --browser=false",
     "preview": "npm run build && wrangler pages dev build/client",
     "typecheck": "react-router typegen && tsc",
     "format": "prettier --write \"./**/*.{ts,tsx,js,jsx,json,md,mdx,css,scss}\""

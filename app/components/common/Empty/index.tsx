@@ -14,7 +14,7 @@ const Empty = ({
           <strong>{title}</strong>
         </div>
       )}
-      {descr && <div className="text-muted">{descr}</div>}
+      {descr && <div className="text-gray-500">{descr}</div>}
     </div>
   )
 }
