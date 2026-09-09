@@ -10,18 +10,23 @@ import style from "./style.module.css"
 
 export default function HomePage() {
   const searchInput = useRef<InputRef>(null)
-  const accountState = cardanoV1.useAccountState().data
+  const account = cardanoV1.useAccountState()
   const status = platformV1.useStatus()
+  const accountState = account.data?.balanceStatus === "ready" ? account.data : null
   const standalone = typeof window !== "undefined" && window.parent === window
-  const emptyState = status.data?.account
-    ? { title: "Loading account", descr: "Cardano account data is not yet available" }
-    : status.data
-      ? { title: "No account selected", descr: "Select a Cardano account in XRAY App to access your information" }
-    : standalone
-      ? { title: "Standalone mode", descr: "Open this mini app inside XRAY App to access an account" }
-      : { title: "Host unavailable", descr: "XRAY App did not respond to the platform status request" }
+  const emptyState = standalone
+    ? { title: "Standalone mode", descr: "Open this mini app inside XRAY App to access an account" }
+    : status.error
+      ? { title: "Connection error", descr: "Could not load platform status from XRAY App" }
+      : !status.data
+        ? { title: "Connecting", descr: "Waiting for XRAY App" }
+        : !status.data.account
+          ? { title: "No account selected", descr: "Select a Cardano account in XRAY App to access your information" }
+          : account.error || account.data?.balanceStatus === "error"
+            ? { title: "Account unavailable", descr: "XRAY App could not load the selected account balance" }
+            : { title: "Loading account", descr: "Cardano account data is not yet available" }
 
-  const assetsRaw = accountState?.state?.balance.assets || []
+  const assetsRaw = accountState?.state.balance.assets ?? []
   const [search, setSearch] = useState("")
 
   const assets = assetsRaw.filter((asset) => {
@@ -50,9 +55,7 @@ export default function HomePage() {
         <h4 className="mb-0 text-2xl font-black">Assets</h4>
       </div>
       <div>
-        {!accountState && (
-          <Empty title={emptyState.title} descr={emptyState.descr} />
-        )}
+        {!accountState && <Empty title={emptyState.title} descr={emptyState.descr} />}
         {accountState && (
           <div>
             <div>
@@ -60,7 +63,7 @@ export default function HomePage() {
                 <div className="me-12 mb-8 text-2xl">
                   <Informers.Ada
                     title="Account Balance"
-                    value={accountState.state?.balance.value || "0"}
+                    value={accountState.state.balance.value}
                     help="Current address balance"
                     hideable
                     // tooltip={
@@ -75,7 +78,7 @@ export default function HomePage() {
                 <div className="me-12 mb-8 text-2xl">
                   <Informers.Ada
                     title="Rewards"
-                    value={accountState?.delegation?.rewards || "0"}
+                    value={accountState.delegation?.rewards ?? 0n}
                     help="Rewards available for withdrawal"
                     hideable
                   />
@@ -83,7 +86,7 @@ export default function HomePage() {
                 <div className="me-12 mb-8 text-2xl">
                   <Informers.Text
                     title="Total Assets"
-                    value={Utils.quantityWithCommas(accountState?.state?.balance.assets?.length || 0)}
+                    value={Utils.quantityWithCommas(accountState.state.balance.assets.length)}
                     help="Total number of assets in the account"
                   />
                 </div>
